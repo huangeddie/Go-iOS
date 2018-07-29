@@ -27,6 +27,7 @@
 		2C089007210E555E00737528 /* ConnectNBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C089006210E555E00737528 /* ConnectNBoard.swift */; };
 		2C089009210E559900737528 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C089008210E559900737528 /* Queue.swift */; };
 		2CB517A1210E565800E0130A /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB517A0210E565800E0130A /* Action.swift */; };
+		2CB517A4210E583D00E0130A /* BoardDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB517A3210E583D00E0130A /* BoardDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		2C089006210E555E00737528 /* ConnectNBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectNBoard.swift; sourceTree = "<group>"; };
 		2C089008210E559900737528 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		2CB517A0210E565800E0130A /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		2CB517A3210E583D00E0130A /* BoardDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				2C088FE0210E42B700737528 /* GameViewController.swift */,
+				2CB517A3210E583D00E0130A /* BoardDelegate.swift */,
 				2CB517A0210E565800E0130A /* Action.swift */,
 				2C088FFC210E54BC00737528 /* Evaluate.swift */,
 				2C088FF6210E544800737528 /* Analyze.swift */,
@@ -213,6 +216,7 @@
 				2C088FE1210E42B700737528 /* GameViewController.swift in Sources */,
 				2C088FF1210E537900737528 /* GOBoard.swift in Sources */,
 				2C089001210E54BC00737528 /* Direction.swift in Sources */,
+				2CB517A4210E583D00E0130A /* BoardDelegate.swift in Sources */,
 				2CB517A1210E565800E0130A /* Action.swift in Sources */,
 				2C088FCF210E3F3700737528 /* AppDelegate.swift in Sources */,
 				2C088FFE210E54BC00737528 /* Game.swift in Sources */,

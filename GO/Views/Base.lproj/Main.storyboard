@@ -80,6 +80,9 @@
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="board" destination="O6p-qx-vUf" id="Dz5-4b-h7r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rhc-gT-nzQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

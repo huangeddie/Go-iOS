@@ -18,15 +18,21 @@ public class BoardView: UIView {
         return dimension - 1
     }
     
-    var gridSize = CGSize()
+    var gridSize: CGSize {
+        return CGSize(width: bounds.width * 0.9, height: bounds.height * 0.9)
+    }
+    
+    var unitLength: CGFloat {
+        return gridSize.height / CGFloat(dimension - 1)
+    }
+    
+    var delegate: BoardDelegate?
     
     public override func draw(_ rect: CGRect) {
         boardColor.setFill()
         let background = UIBezierPath(roundedRect: bounds, cornerRadius: 0)
         background.fill()
         
-        let gridSize = CGSize(width: bounds.width * 0.9, height: bounds.height * 0.9)
-
         let grid = UIBezierPath()
         for i in 0...numberOfSquares {
             grid.move(to: CGPoint(x: (bounds.width - gridSize.width) / 2, y: (bounds.height - gridSize.height) / 2 + CGFloat(i) * gridSize.height / CGFloat(numberOfSquares)))
@@ -68,14 +74,31 @@ public class BoardView: UIView {
             }
         }
 
-
-
-
         grid.fill()
 
-
-
         grid.stroke()
-        self.gridSize = gridSize
+    }
+    
+    public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        if let touch = touches.first {
+            
+            let location = touch.location(in: self)
+            
+            print(location)
+            
+            let margin = (bounds.height - gridSize.height) / 2
+            
+            let gridX = max(location.x - margin, 0)
+            let gridY = max(location.y - margin, 0)
+            
+            let x = Int(gridX / unitLength)
+            let y = Int(gridY / unitLength)
+            
+            let point = Point(x, y)
+            
+            delegate?.attemptedToMakeMove(point)
+            
+        }
     }
 }

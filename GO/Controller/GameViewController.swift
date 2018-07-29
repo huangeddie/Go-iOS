@@ -7,9 +7,14 @@
 //
 
 import UIKit
-import SpriteKit
 
 class GameViewController: UIViewController {
+    
+    var dimension: Int = 19
+    
+    @IBOutlet weak var board: BoardView!
+    
+    var game: Game<GOBoard> = Game(dimension: 19)
     
     override var prefersStatusBarHidden: Bool {
         return true
@@ -19,6 +24,13 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        board.delegate = self
+        board.dimension = dimension
+    }
+    
+    func update() -> Void {
+        board.update(game.board)
     }
     
 
@@ -32,4 +44,14 @@ class GameViewController: UIViewController {
     }
     */
 
+}
+
+extension GameViewController: BoardDelegate {
+    func attemptedToMakeMove(_ point: Point) {
+        do {
+            try game.makeMove(point)
+        } catch {
+            print(error)
+        }
+    }
 }
