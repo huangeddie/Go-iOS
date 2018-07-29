@@ -28,13 +28,13 @@ class BoardMenuViewController: UIViewController {
     }
     
     @IBAction func go(_ sender: Any) {
-        let dimension = dimensionPicker.selectedRow(inComponent: 0) + 4
+        let dimension = dimensionPicker.selectedRow(inComponent: 0) + 9
         
         guard let gameVC = presentingViewController as? GameViewController else {
             fatalError()
         }
         
-        gameVC.game.startGame(dimension: dimension)
+        _ = gameVC.game.startGame(dimension: dimension)
         gameVC.update()
         
         dismiss(animated: true, completion: nil)
@@ -63,11 +63,11 @@ extension BoardMenuViewController: UIPickerViewDelegate, UIPickerViewDataSource 
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 16
+        return 11
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return "\(row + 4)"
+        return "\(row + 9)"
     }
     
 }
