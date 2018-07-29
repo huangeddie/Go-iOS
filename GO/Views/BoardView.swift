@@ -17,6 +17,8 @@ public class BoardView: UIView {
     
     var board: GOBoard?
     
+    var considering: Point?
+    
     private var numberOfSquares: Int {
         return dimension - 1
     }
@@ -31,6 +33,10 @@ public class BoardView: UIView {
     
     var unitLength: CGFloat {
         return gridSize.height / CGFloat(dimension - 1)
+    }
+    
+    var margin: CGFloat {
+        return (bounds.width - gridSize.width) / 2
     }
     
     var delegate: BoardDelegate?
@@ -48,11 +54,10 @@ public class BoardView: UIView {
             grid.move(to: CGPoint(x: (bounds.width - gridSize.width) / 2 + CGFloat(i) * gridSize.width / CGFloat(numberOfSquares), y: (bounds.height - gridSize.height) / 2))
             grid.addLine(to: CGPoint(x: (bounds.width - gridSize.width) / 2 + CGFloat(i) * gridSize.width / CGFloat(numberOfSquares), y: (bounds.height - gridSize.height) / 2 + gridSize.height))
         }
-        UIColor.black.setStroke()
-
+        UIColor.darkGray.setStroke()
 
         // create the dots
-        if (dots) {
+        if dots && (dimension == 19 || dimension == 7) {
             UIColor.black.setFill()
             var w = gridSize.width / 3
             var h = gridSize.height / 3
@@ -85,6 +90,19 @@ public class BoardView: UIView {
 
         grid.stroke()
         
+        // Show where user is touching
+        if let considering = considering {
+            UIColor.red.setStroke()
+            let outline = UIBezierPath()
+            outline.move(to: CGPoint(x: gridPosition.x + unitLength * CGFloat(considering.x), y: gridPosition.y))
+            outline.addLine(to: CGPoint(x: gridPosition.x + unitLength * CGFloat(considering.x), y: bounds.maxY - margin))
+            
+            outline.move(to: CGPoint(x: gridPosition.x, y: gridPosition.y + unitLength * CGFloat(considering.y)))
+            outline.addLine(to: CGPoint(x: bounds.maxX - margin, y: gridPosition.y + unitLength * CGFloat(considering.y)))
+            
+            outline.stroke()
+        }
+        
         // Add the pieces
         if let goBoard = board {
             let pieceRadius = unitLength / 2 * 0.90
@@ -112,7 +130,21 @@ public class BoardView: UIView {
         }
     }
     
+    func getPoint(_ location: CGPoint) -> Point {
+        let margin = (bounds.height - gridSize.height) / 2
+        
+        let gridX = max(location.x - margin, 0)
+        let gridY = max(location.y - margin, 0)
+        
+        let x = Int((gridX / unitLength).rounded())
+        let y = Int((gridY / unitLength).rounded())
+        
+        let point = Point(x, y)
+        return point
+    }
+    
     public func update(_ board: GOBoard) {
+        self.dimension = board.dimension
         self.board = board
         self.setNeedsDisplay()
     }
@@ -120,22 +152,34 @@ public class BoardView: UIView {
     public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         if let touch = touches.first {
-            
             let location = touch.location(in: self)
+
+            let point = getPoint(location)
             
-            
-            let margin = (bounds.height - gridSize.height) / 2
-            
-            let gridX = max(location.x - margin, 0)
-            let gridY = max(location.y - margin, 0)
-            
-            let x = Int(gridX / unitLength)
-            let y = Int(gridY / unitLength)
-            
-            let point = Point(x, y)
+            considering = nil
             
             delegate?.attemptedToMakeMove(point)
             
         }
+    }
+    
+    fileprivate func showConsideration(_ touches: Set<UITouch>) {
+        if let touch = touches.first {
+            let location = touch.location(in: self)
+            
+            let point = getPoint(location)
+            
+            considering = point
+            
+            setNeedsDisplay()
+        }
+    }
+    
+    public override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        showConsideration(touches)
+    }
+    
+    public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        showConsideration(touches)
     }
 }

@@ -29,6 +29,18 @@ class GameViewController: UIViewController {
         board.dimension = dimension
     }
     
+    @IBAction func undo(_ sender: Any) {
+        game.undo()
+        update()
+    }
+    
+    
+    @IBAction func newGame(_ sender: Any) {
+        game.reset()
+        update()
+    }
+    
+    
     func update() -> Void {
         board.update(game.board)
     }
@@ -43,7 +55,7 @@ class GameViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
 
 extension GameViewController: BoardDelegate {
