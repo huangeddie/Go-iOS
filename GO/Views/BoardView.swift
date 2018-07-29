@@ -10,9 +10,12 @@ import UIKit
 
 @IBDesignable
 public class BoardView: UIView {
+    
     @IBInspectable var boardColor: UIColor = UIColor.brown
     @IBInspectable var dimension: Int = 19
     @IBInspectable var dots: Bool = false
+    
+    var board: GOBoard?
     
     private var numberOfSquares: Int {
         return dimension - 1
@@ -20,6 +23,10 @@ public class BoardView: UIView {
     
     var gridSize: CGSize {
         return CGSize(width: bounds.width * 0.9, height: bounds.height * 0.9)
+    }
+    
+    var gridPosition: CGPoint {
+        return CGPoint(x: bounds.width * 0.1, y: bounds.height * 0.1)
     }
     
     var unitLength: CGFloat {
@@ -77,6 +84,37 @@ public class BoardView: UIView {
         grid.fill()
 
         grid.stroke()
+        
+        // Add the pieces
+        if let goBoard = board {
+            let pieceRadius = unitLength / 2 * 0.90
+            let pieceDiameter = pieceRadius * 2
+            
+            for x in 0..<dimension {
+                for y in 0..<dimension {
+                    if let player = goBoard.grid[x][y] {
+                        let position = CGPoint(x: gridPosition.x + unitLength * CGFloat(x) - pieceRadius, y: gridPosition.y + unitLength * CGFloat(y) - pieceRadius)
+                        
+                        let rect = CGRect(origin: position, size: CGSize(width: pieceDiameter, height: pieceDiameter))
+                        
+                        var color: UIColor
+                        if player == .black {
+                            color = .black
+                        } else {
+                            color = .white
+                        }
+                        color.setFill()
+                        
+                        UIBezierPath(ovalIn: rect).fill()
+                    }
+                }
+            }
+        }
+    }
+    
+    public func update(_ board: GOBoard) {
+        self.board = board
+        self.setNeedsDisplay()
     }
     
     public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -85,7 +123,6 @@ public class BoardView: UIView {
             
             let location = touch.location(in: self)
             
-            print(location)
             
             let margin = (bounds.height - gridSize.height) / 2
             

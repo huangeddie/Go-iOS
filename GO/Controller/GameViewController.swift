@@ -50,6 +50,7 @@ extension GameViewController: BoardDelegate {
     func attemptedToMakeMove(_ point: Point) {
         do {
             try game.makeMove(point)
+            update()
         } catch {
             print(error)
         }
