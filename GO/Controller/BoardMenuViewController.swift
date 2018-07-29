@@ -24,11 +24,6 @@ class BoardMenuViewController: UIViewController {
         dimensionPicker.dataSource = self
 
         // Do any additional setup after loading the view.
-        
-        
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
         dimensionPicker.selectRow(18, inComponent: 0, animated: false)
     }
     
@@ -74,4 +69,5 @@ extension BoardMenuViewController: UIPickerViewDelegate, UIPickerViewDataSource 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return "\(row + 4)"
     }
+    
 }
