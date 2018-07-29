@@ -105,7 +105,7 @@ public class BoardView: UIView {
         
         // Add the pieces
         if let goBoard = board {
-            let pieceRadius = unitLength / 2 * 0.90
+            let pieceRadius = unitLength / 2 * 0.65
             let pieceDiameter = pieceRadius * 2
             
             for x in 0..<dimension {
