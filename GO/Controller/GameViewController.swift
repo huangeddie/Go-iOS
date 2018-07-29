@@ -13,6 +13,7 @@ class GameViewController: UIViewController {
     var dimension: Int = 19
     
     @IBOutlet weak var board: BoardView!
+    @IBOutlet weak var turnIndicator: UIView!
     
     var game: Game<GOBoard> = Game(dimension: 19)
     
@@ -27,10 +28,17 @@ class GameViewController: UIViewController {
         
         board.delegate = self
         board.dimension = dimension
+        
+        update()
     }
     
     @IBAction func undo(_ sender: Any) {
         game.undo()
+        update()
+    }
+    
+    @IBAction func pass(_ sender: Any) {
+        game.pass()
         update()
     }
     
@@ -43,6 +51,11 @@ class GameViewController: UIViewController {
     
     func update() -> Void {
         board.update(game.board)
+        if game.board.turn == .black {
+            turnIndicator.backgroundColor = .black
+        } else {
+            turnIndicator.backgroundColor = .white
+        }
     }
     
 

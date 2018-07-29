@@ -12,6 +12,9 @@ class BoardMenuViewController: UIViewController {
 
     @IBOutlet weak var dimensionPicker: UIPickerView!
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     
     
     override func viewDidLoad() {
@@ -21,6 +24,12 @@ class BoardMenuViewController: UIViewController {
         dimensionPicker.dataSource = self
 
         // Do any additional setup after loading the view.
+        
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        dimensionPicker.selectRow(18, inComponent: 0, animated: false)
     }
     
     @IBAction func go(_ sender: Any) {
