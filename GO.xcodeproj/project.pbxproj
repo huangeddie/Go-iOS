@@ -13,6 +13,20 @@
 		2C088FD9210E3F3800737528 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C088FD7210E3F3800737528 /* LaunchScreen.storyboard */; };
 		2C088FE1210E42B700737528 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C088FE0210E42B700737528 /* GameViewController.swift */; };
 		2C088FE3210E45E500737528 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C088FE2210E45E500737528 /* BoardView.swift */; };
+		2C088FE7210E4EBD00737528 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C088FE6210E4EBD00737528 /* Storage.swift */; };
+		2C088FED210E52A700737528 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C088FEC210E52A700737528 /* Point.swift */; };
+		2C088FEF210E533C00737528 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C088FEE210E533C00737528 /* Board.swift */; };
+		2C088FF1210E537900737528 /* GOBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C088FF0210E537900737528 /* GOBoard.swift */; };
+		2C088FF7210E544800737528 /* Analyze.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C088FF6210E544800737528 /* Analyze.swift */; };
+		2C088FF9210E546800737528 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C088FF8210E546800737528 /* Player.swift */; };
+		2C088FFE210E54BC00737528 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C088FFA210E54BB00737528 /* Game.swift */; };
+		2C089000210E54BC00737528 /* Evaluate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C088FFC210E54BC00737528 /* Evaluate.swift */; };
+		2C089001210E54BC00737528 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C088FFD210E54BC00737528 /* Direction.swift */; };
+		2C089003210E54FC00737528 /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C089002210E54FC00737528 /* Mode.swift */; };
+		2C089005210E553500737528 /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C089004210E553400737528 /* Block.swift */; };
+		2C089007210E555E00737528 /* ConnectNBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C089006210E555E00737528 /* ConnectNBoard.swift */; };
+		2C089009210E559900737528 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C089008210E559900737528 /* Queue.swift */; };
+		2CB517A1210E565800E0130A /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB517A0210E565800E0130A /* Action.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +38,20 @@
 		2C088FDA210E3F3800737528 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C088FE0210E42B700737528 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		2C088FE2210E45E500737528 /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
+		2C088FE6210E4EBD00737528 /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		2C088FEC210E52A700737528 /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		2C088FEE210E533C00737528 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		2C088FF0210E537900737528 /* GOBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GOBoard.swift; sourceTree = "<group>"; };
+		2C088FF6210E544800737528 /* Analyze.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Analyze.swift; sourceTree = "<group>"; };
+		2C088FF8210E546800737528 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		2C088FFA210E54BB00737528 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Game.swift; path = /Users/eddie/Documents/computer_science/projects/GO/GO/Game.swift; sourceTree = "<absolute>"; };
+		2C088FFC210E54BC00737528 /* Evaluate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Evaluate.swift; path = /Users/eddie/Documents/computer_science/projects/GO/GO/Evaluate.swift; sourceTree = "<absolute>"; };
+		2C088FFD210E54BC00737528 /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Direction.swift; path = /Users/eddie/Documents/computer_science/projects/GO/GO/Direction.swift; sourceTree = "<absolute>"; };
+		2C089002210E54FC00737528 /* Mode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mode.swift; sourceTree = "<group>"; };
+		2C089004210E553400737528 /* Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
+		2C089006210E555E00737528 /* ConnectNBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectNBoard.swift; sourceTree = "<group>"; };
+		2C089008210E559900737528 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		2CB517A0210E565800E0130A /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +84,53 @@
 		2C088FCD210E3F3700737528 /* GO */ = {
 			isa = PBXGroup;
 			children = (
-				2C088FCE210E3F3700737528 /* AppDelegate.swift */,
-				2C088FE0210E42B700737528 /* GameViewController.swift */,
-				2C088FD2210E3F3700737528 /* Main.storyboard */,
-				2C088FE2210E45E500737528 /* BoardView.swift */,
+				2C08900A210E55C300737528 /* Models */,
+				2CB5179F210E55FF00E0130A /* Views */,
+				2CB517A2210E567300E0130A /* Controller */,
 				2C088FD5210E3F3800737528 /* Assets.xcassets */,
+				2C088FCE210E3F3700737528 /* AppDelegate.swift */,
 				2C088FD7210E3F3800737528 /* LaunchScreen.storyboard */,
 				2C088FDA210E3F3800737528 /* Info.plist */,
 			);
 			path = GO;
+			sourceTree = "<group>";
+		};
+		2C08900A210E55C300737528 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2C088FE6210E4EBD00737528 /* Storage.swift */,
+				2C088FFD210E54BC00737528 /* Direction.swift */,
+				2C088FFA210E54BB00737528 /* Game.swift */,
+				2C088FEC210E52A700737528 /* Point.swift */,
+				2C089008210E559900737528 /* Queue.swift */,
+				2C089002210E54FC00737528 /* Mode.swift */,
+				2C088FF8210E546800737528 /* Player.swift */,
+				2C089006210E555E00737528 /* ConnectNBoard.swift */,
+				2C089004210E553400737528 /* Block.swift */,
+				2C088FEE210E533C00737528 /* Board.swift */,
+				2C088FF0210E537900737528 /* GOBoard.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2CB5179F210E55FF00E0130A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2C088FD2210E3F3700737528 /* Main.storyboard */,
+				2C088FE2210E45E500737528 /* BoardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2CB517A2210E567300E0130A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2C088FE0210E42B700737528 /* GameViewController.swift */,
+				2CB517A0210E565800E0130A /* Action.swift */,
+				2C088FFC210E54BC00737528 /* Evaluate.swift */,
+				2C088FF6210E544800737528 /* Analyze.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +204,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C088FF9210E546800737528 /* Player.swift in Sources */,
+				2C089005210E553500737528 /* Block.swift in Sources */,
+				2C089000210E54BC00737528 /* Evaluate.swift in Sources */,
 				2C088FE3210E45E500737528 /* BoardView.swift in Sources */,
+				2C089007210E555E00737528 /* ConnectNBoard.swift in Sources */,
+				2C089009210E559900737528 /* Queue.swift in Sources */,
 				2C088FE1210E42B700737528 /* GameViewController.swift in Sources */,
+				2C088FF1210E537900737528 /* GOBoard.swift in Sources */,
+				2C089001210E54BC00737528 /* Direction.swift in Sources */,
+				2CB517A1210E565800E0130A /* Action.swift in Sources */,
 				2C088FCF210E3F3700737528 /* AppDelegate.swift in Sources */,
+				2C088FFE210E54BC00737528 /* Game.swift in Sources */,
+				2C088FED210E52A700737528 /* Point.swift in Sources */,
+				2C089003210E54FC00737528 /* Mode.swift in Sources */,
+				2C088FF7210E544800737528 /* Analyze.swift in Sources */,
+				2C088FEF210E533C00737528 /* Board.swift in Sources */,
+				2C088FE7210E4EBD00737528 /* Storage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
