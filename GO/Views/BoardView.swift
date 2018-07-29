@@ -26,7 +26,7 @@ public class BoardView: UIView {
     }
     
     var gridPosition: CGPoint {
-        return CGPoint(x: bounds.width * 0.1, y: bounds.height * 0.1)
+        return CGPoint(x: bounds.width * 0.05, y: bounds.height * 0.05)
     }
     
     var unitLength: CGFloat {
