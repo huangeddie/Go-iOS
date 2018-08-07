@@ -13,6 +13,8 @@ class GameViewController: UIViewController {
     
     var dimension: Int = 19
     
+    var audioPlayer: AVAudioPlayer?
+    
     @IBOutlet weak var board: BoardView!
     @IBOutlet weak var turnIndicator: TurnView!
     
@@ -70,12 +72,12 @@ class GameViewController: UIViewController {
 }
 
 extension GameViewController: BoardDelegate {
+    
     func attemptedToMakeMove(_ point: Point) {
         do {
             try game.makeMove(point)
             
             // Make a sound
-            var audioPlayer: AVAudioPlayer?
             let path = Bundle.main.path(forResource: "Bottle Cork", ofType:"mp3")!
             let url = URL(fileURLWithPath: path)
             
