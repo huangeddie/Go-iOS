@@ -56,6 +56,10 @@ public class BoardView: UIView {
         }
         UIColor.darkGray.setStroke()
 
+        grid.fill()
+
+        grid.stroke()
+        
         // create the dots
         if dots && (dimension == 19 || dimension == 7) {
             UIColor.black.setFill()
@@ -72,7 +76,7 @@ public class BoardView: UIView {
             default:
                 break
             }
-
+            
             let arr = [
                 CGRect(origin: CGPoint(x: (bounds.width - s.width) / 2, y: (bounds.height - s.height) / 2), size: s),
                 CGRect(origin: CGPoint(x: (bounds.width - s.width) / 2 - w, y: (bounds.height - s.height) / 2 + h), size: s),
@@ -80,15 +84,11 @@ public class BoardView: UIView {
                 CGRect(origin: CGPoint(x: (bounds.width - s.width) / 2 - w, y: (bounds.height - s.height) / 2 - h), size: s),
                 CGRect(origin: CGPoint(x: (bounds.width - s.width) / 2 + w, y: (bounds.height - s.height) / 2 - h), size: s)
             ]
-
+            
             for i in arr {
                 UIBezierPath(ovalIn: i).fill()
             }
         }
-
-        grid.fill()
-
-        grid.stroke()
         
         // Show where user is touching
         if let considering = considering {

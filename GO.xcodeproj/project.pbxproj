@@ -31,6 +31,7 @@
 		2CB517A6210E660100E0130A /* BoardMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB517A5210E660100E0130A /* BoardMenuViewController.swift */; };
 		2CEE5CE22119E38000E08AAA /* TurnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEE5CE12119E38000E08AAA /* TurnView.swift */; };
 		2CEE5CE42119EDB600E08AAA /* Bottle Cork.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2CEE5CE32119EDB600E08AAA /* Bottle Cork.mp3 */; };
+		2CEE5CE62119F41D00E08AAA /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEE5CE52119F41D00E08AAA /* MyButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		2CB517A5210E660100E0130A /* BoardMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardMenuViewController.swift; sourceTree = "<group>"; };
 		2CEE5CE12119E38000E08AAA /* TurnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnView.swift; sourceTree = "<group>"; };
 		2CEE5CE32119EDB600E08AAA /* Bottle Cork.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Bottle Cork.mp3"; sourceTree = "<group>"; };
+		2CEE5CE52119F41D00E08AAA /* MyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				2C088FD2210E3F3700737528 /* Main.storyboard */,
 				2C088FE2210E45E500737528 /* BoardView.swift */,
 				2CEE5CE12119E38000E08AAA /* TurnView.swift */,
+				2CEE5CE52119F41D00E08AAA /* MyButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				2C089009210E559900737528 /* Queue.swift in Sources */,
 				2C088FE1210E42B700737528 /* GameViewController.swift in Sources */,
 				2C088FF1210E537900737528 /* GOBoard.swift in Sources */,
+				2CEE5CE62119F41D00E08AAA /* MyButton.swift in Sources */,
 				2C089001210E54BC00737528 /* Direction.swift in Sources */,
 				2CEE5CE22119E38000E08AAA /* TurnView.swift in Sources */,
 				2CB517A4210E583D00E0130A /* BoardDelegate.swift in Sources */,
