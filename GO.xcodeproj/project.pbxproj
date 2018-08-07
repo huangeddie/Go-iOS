@@ -29,6 +29,7 @@
 		2CB517A1210E565800E0130A /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB517A0210E565800E0130A /* Action.swift */; };
 		2CB517A4210E583D00E0130A /* BoardDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB517A3210E583D00E0130A /* BoardDelegate.swift */; };
 		2CB517A6210E660100E0130A /* BoardMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB517A5210E660100E0130A /* BoardMenuViewController.swift */; };
+		2CEE5CE22119E38000E08AAA /* TurnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEE5CE12119E38000E08AAA /* TurnView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		2CB517A0210E565800E0130A /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		2CB517A3210E583D00E0130A /* BoardDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardDelegate.swift; sourceTree = "<group>"; };
 		2CB517A5210E660100E0130A /* BoardMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardMenuViewController.swift; sourceTree = "<group>"; };
+		2CEE5CE12119E38000E08AAA /* TurnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			children = (
 				2C088FD2210E3F3700737528 /* Main.storyboard */,
 				2C088FE2210E45E500737528 /* BoardView.swift */,
+				2CEE5CE12119E38000E08AAA /* TurnView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				2C088FE1210E42B700737528 /* GameViewController.swift in Sources */,
 				2C088FF1210E537900737528 /* GOBoard.swift in Sources */,
 				2C089001210E54BC00737528 /* Direction.swift in Sources */,
+				2CEE5CE22119E38000E08AAA /* TurnView.swift in Sources */,
 				2CB517A4210E583D00E0130A /* BoardDelegate.swift in Sources */,
 				2CB517A1210E565800E0130A /* Action.swift in Sources */,
 				2CB517A6210E660100E0130A /* BoardMenuViewController.swift in Sources */,
@@ -375,6 +379,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CNVS5VG567;
 				INFOPLIST_FILE = GO/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -393,6 +398,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CNVS5VG567;
 				INFOPLIST_FILE = GO/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
