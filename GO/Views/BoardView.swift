@@ -115,13 +115,7 @@ public class BoardView: UIView {
                         
                         let rect = CGRect(origin: position, size: CGSize(width: pieceDiameter, height: pieceDiameter))
                         
-                        var color: UIColor
-                        if player == .black {
-                            color = .black
-                        } else {
-                            color = .white
-                        }
-                        color.setFill()
+                        player.color.setFill()
                         
                         UIBezierPath(ovalIn: rect).fill()
                     }
