@@ -13,12 +13,16 @@ class GameViewController: UIViewController {
     var dimension: Int = 19
     
     @IBOutlet weak var board: BoardView!
-    @IBOutlet weak var turnIndicator: UIView!
+    @IBOutlet weak var turnIndicator: TurnView!
     
     var game: Game<GOBoard> = Game(dimension: 19)
     
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .landscape
     }
 
     override func viewDidLoad() {
@@ -51,11 +55,8 @@ class GameViewController: UIViewController {
     
     func update() -> Void {
         board.update(game.board)
-        if game.board.turn == .black {
-            turnIndicator.backgroundColor = .black
-        } else {
-            turnIndicator.backgroundColor = .white
-        }
+        turnIndicator.turn = game.board.turn
+        turnIndicator.gameEnded = game.board.gameEnded
     }
     
 
