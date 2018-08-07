@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class GameViewController: UIViewController {
     
@@ -47,11 +48,6 @@ class GameViewController: UIViewController {
     }
     
     
-    @IBAction func newGame(_ sender: Any) {
-        game.reset()
-        update()
-    }
-    
     
     func update() -> Void {
         board.update(game.board)
@@ -77,6 +73,20 @@ extension GameViewController: BoardDelegate {
     func attemptedToMakeMove(_ point: Point) {
         do {
             try game.makeMove(point)
+            
+            // Make a sound
+            var audioPlayer: AVAudioPlayer?
+            let path = Bundle.main.path(forResource: "Bottle Cork", ofType:"mp3")!
+            let url = URL(fileURLWithPath: path)
+            
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: url)
+                audioPlayer?.play()
+            } catch {
+                // couldn't load file :(
+                print("Couln't load file")
+            }
+            
             update()
         } catch {
             print(error)

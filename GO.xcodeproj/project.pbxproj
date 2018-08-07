@@ -30,6 +30,7 @@
 		2CB517A4210E583D00E0130A /* BoardDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB517A3210E583D00E0130A /* BoardDelegate.swift */; };
 		2CB517A6210E660100E0130A /* BoardMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB517A5210E660100E0130A /* BoardMenuViewController.swift */; };
 		2CEE5CE22119E38000E08AAA /* TurnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEE5CE12119E38000E08AAA /* TurnView.swift */; };
+		2CEE5CE42119EDB600E08AAA /* Bottle Cork.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2CEE5CE32119EDB600E08AAA /* Bottle Cork.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		2CB517A3210E583D00E0130A /* BoardDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardDelegate.swift; sourceTree = "<group>"; };
 		2CB517A5210E660100E0130A /* BoardMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardMenuViewController.swift; sourceTree = "<group>"; };
 		2CEE5CE12119E38000E08AAA /* TurnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnView.swift; sourceTree = "<group>"; };
+		2CEE5CE32119EDB600E08AAA /* Bottle Cork.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Bottle Cork.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				2CB5179F210E55FF00E0130A /* Views */,
 				2CB517A2210E567300E0130A /* Controller */,
 				2C088FD5210E3F3800737528 /* Assets.xcassets */,
+				2CEE5CE32119EDB600E08AAA /* Bottle Cork.mp3 */,
 				2C088FCE210E3F3700737528 /* AppDelegate.swift */,
 				2C088FD7210E3F3800737528 /* LaunchScreen.storyboard */,
 				2C088FDA210E3F3800737528 /* Info.plist */,
@@ -202,6 +205,7 @@
 			files = (
 				2C088FD9210E3F3800737528 /* LaunchScreen.storyboard in Resources */,
 				2C088FD6210E3F3800737528 /* Assets.xcassets in Resources */,
+				2CEE5CE42119EDB600E08AAA /* Bottle Cork.mp3 in Resources */,
 				2C088FD4210E3F3700737528 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
