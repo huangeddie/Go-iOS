@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e2D-q0-aTW">
-    <device id="ipad9_7" orientation="landscape">
+    <device id="retina5_9" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -16,11 +17,11 @@
             <objects>
                 <viewController extendedLayoutIncludesOpaqueBars="YES" id="e2D-q0-aTW" customClass="GameViewController" customModule="GO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jok-UY-UoD">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O6p-qx-vUf" customClass="BoardView" customModule="GO" customModuleProvider="target">
-                                <rect key="frame" x="138" y="20" width="748" height="748"/>
+                                <rect key="frame" x="229" y="0.0" width="354" height="354"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="O6p-qx-vUf" secondAttribute="height" id="4ua-7O-lQL"/>
                                 </constraints>
@@ -38,13 +39,13 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jjz-68-uHC">
-                                <rect key="frame" x="886" y="20" width="138" height="748"/>
+                                <rect key="frame" x="583" y="0.0" width="185" height="354"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="P7c-2x-rAB">
-                                        <rect key="frame" x="10" y="10" width="118" height="728"/>
+                                        <rect key="frame" x="10" y="10" width="165" height="334"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Mc-Ba-XXN" customClass="MyButton" customModule="GO" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="118" height="359"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="165" height="162"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -61,7 +62,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X6u-Li-MPt" customClass="MyButton" customModule="GO" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="369" width="118" height="359"/>
+                                                <rect key="frame" x="0.0" y="172" width="165" height="162"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -88,20 +89,20 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i8o-c6-rUM">
-                                <rect key="frame" x="0.0" y="20" width="138" height="748"/>
+                                <rect key="frame" x="44" y="0.0" width="185" height="354"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2G0-2U-57l">
-                                        <rect key="frame" x="10" y="10" width="118" height="728"/>
+                                        <rect key="frame" x="10" y="10" width="165" height="334"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9LD-GD-k5d" customClass="TurnView" customModule="GO" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="118" height="359"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="165" height="162"/>
                                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="gameEnded" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MME-kO-rT7" customClass="MyButton" customModule="GO" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="369" width="118" height="359"/>
+                                                <rect key="frame" x="0.0" y="172" width="165" height="162"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -160,33 +161,33 @@
             <objects>
                 <viewController id="lJk-AR-WAa" customClass="BoardMenuViewController" customModule="GO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EYk-Ma-Y0d">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="s9a-Gy-8VM">
-                                <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
+                                <rect key="frame" x="44" y="20" width="724" height="314"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fQU-jr-0nv">
-                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="680"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="724" height="246"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dimension" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntD-RP-H1M">
-                                                <rect key="frame" x="447.5" y="0.0" width="129" height="31.5"/>
+                                                <rect key="frame" x="297.66666666666669" y="0.0" width="129" height="31.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l09-2Q-xXd">
-                                                <rect key="frame" x="352" y="41.5" width="320" height="638.5"/>
+                                                <rect key="frame" x="202" y="41.333333333333329" width="320" height="204.66666666666669"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </pickerView>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aaA-2D-otw">
-                                        <rect key="frame" x="0.0" y="688" width="1024" height="60"/>
+                                        <rect key="frame" x="0.0" y="254" width="724" height="60"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S85-5L-248">
-                                                <rect key="frame" x="0.0" y="0.0" width="512" height="60"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="362" height="60"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="Cancel">
                                                     <color key="titleColor" red="1" green="0.80000000000000004" blue="0.0" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
@@ -196,7 +197,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9k-IP-5oc">
-                                                <rect key="frame" x="512" y="0.0" width="512" height="60"/>
+                                                <rect key="frame" x="362" y="0.0" width="362" height="60"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
                                                 <state key="normal" title="Go">
                                                     <color key="titleColor" red="0.15686274510000001" green="0.80392156859999997" blue="0.25490196079999999" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
@@ -213,9 +214,9 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="FiE-Q9-hmh" firstAttribute="trailing" secondItem="s9a-Gy-8VM" secondAttribute="trailing" id="X7I-Xp-HJV"/>
-                            <constraint firstItem="s9a-Gy-8VM" firstAttribute="top" secondItem="FiE-Q9-hmh" secondAttribute="top" id="msN-df-8jz"/>
+                            <constraint firstItem="s9a-Gy-8VM" firstAttribute="top" secondItem="FiE-Q9-hmh" secondAttribute="top" constant="20" id="msN-df-8jz"/>
                             <constraint firstItem="s9a-Gy-8VM" firstAttribute="leading" secondItem="FiE-Q9-hmh" secondAttribute="leading" id="t4s-Sz-hQw"/>
-                            <constraint firstItem="FiE-Q9-hmh" firstAttribute="bottom" secondItem="s9a-Gy-8VM" secondAttribute="bottom" id="w7q-df-ocN"/>
+                            <constraint firstItem="FiE-Q9-hmh" firstAttribute="bottom" secondItem="s9a-Gy-8VM" secondAttribute="bottom" constant="20" id="w7q-df-ocN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FiE-Q9-hmh"/>
                     </view>
