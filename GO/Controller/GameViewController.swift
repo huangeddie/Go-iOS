@@ -57,6 +57,7 @@ class GameViewController: UIViewController {
         board.update(game.board)
         turnIndicator.turn = game.board.turn
         turnIndicator.gameEnded = game.board.gameEnded
+        turnIndicator.setNeedsDisplay()
     }
     
 

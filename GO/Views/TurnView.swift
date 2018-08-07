@@ -26,6 +26,7 @@ class TurnView: UIView {
         outline.addClip()
         outline.lineWidth = 10
         
+        
         if turn == .black {
             UIColor.black.set()
         } else {
@@ -35,9 +36,16 @@ class TurnView: UIView {
         outline.fill()
         
         if gameEnded {
+            
+            alpha = 0.50
+            
+            outline.fill(with: .normal, alpha: 0.75)
+            
             #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1).setStroke()
             
             outline.stroke()
+        } else {
+            alpha = 0.75
         }
     }
 }
