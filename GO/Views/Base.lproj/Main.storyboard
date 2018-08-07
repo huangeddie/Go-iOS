@@ -31,6 +31,9 @@
                                         <color key="value" name="systemBrownColor" catalog="System" colorSpace="catalog"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="dots" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gridColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jjz-68-uHC">
@@ -41,12 +44,15 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Mc-Ba-XXN" customClass="MyButton" customModule="GO" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="118" height="359"/>
-                                                <state key="normal" title="Undo">
+                                                <state key="normal">
                                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="color">
                                                         <color key="value" red="1" green="0.80000000000000004" blue="0.0" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="type">
+                                                        <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
@@ -55,12 +61,15 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X6u-Li-MPt" customClass="MyButton" customModule="GO" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="369" width="118" height="359"/>
-                                                <state key="normal" title="Pass">
+                                                <state key="normal">
                                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="color">
                                                         <color key="value" red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="type">
+                                                        <integer key="value" value="2"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
@@ -92,12 +101,15 @@
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MME-kO-rT7" customClass="MyButton" customModule="GO" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="369" width="118" height="359"/>
-                                                <state key="normal" title="New Game">
+                                                <state key="normal">
                                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="color">
                                                         <color key="value" red="0.15686274509803921" green="0.80392156862745101" blue="0.25490196078431371" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="type">
+                                                        <integer key="value" value="0"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
@@ -150,42 +162,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l09-2Q-xXd">
-                                <rect key="frame" x="352" y="276" width="320" height="216"/>
-                            </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dimension" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntD-RP-H1M">
-                                <rect key="frame" x="447.5" y="236.5" width="129" height="31.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9k-IP-5oc">
-                                <rect key="frame" x="497" y="500" width="30" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <state key="normal" title="GO"/>
-                                <connections>
-                                    <action selector="go:" destination="lJk-AR-WAa" eventType="touchUpInside" id="Ik2-bR-Vvz"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S85-5L-248">
-                                <rect key="frame" x="482" y="20" width="61" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Cancel"/>
-                                <connections>
-                                    <action selector="cancel:" destination="lJk-AR-WAa" eventType="touchUpInside" id="2qn-P4-kWs"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="s9a-Gy-8VM">
+                                <rect key="frame" x="352" y="107.5" width="320" height="553.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fQU-jr-0nv">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="257.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dimension" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntD-RP-H1M">
+                                                <rect key="frame" x="95.5" y="0.0" width="129" height="31.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l09-2Q-xXd">
+                                                <rect key="frame" x="0.0" y="41.5" width="320" height="216"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </pickerView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9k-IP-5oc">
+                                        <rect key="frame" x="132.5" y="357.5" width="55" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                        <state key="normal" title="Go">
+                                            <color key="titleColor" red="0.15686274510000001" green="0.80392156859999997" blue="0.25490196079999999" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="go:" destination="lJk-AR-WAa" eventType="touchUpInside" id="Ik2-bR-Vvz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S85-5L-248">
+                                        <rect key="frame" x="129.5" y="517.5" width="61" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" red="1" green="0.80000000000000004" blue="0.0" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancel:" destination="lJk-AR-WAa" eventType="touchUpInside" id="2qn-P4-kWs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ntD-RP-H1M" firstAttribute="centerX" secondItem="EYk-Ma-Y0d" secondAttribute="centerX" id="7Pw-OQ-sqJ"/>
-                            <constraint firstItem="l09-2Q-xXd" firstAttribute="centerY" secondItem="EYk-Ma-Y0d" secondAttribute="centerY" id="Ckt-FO-NGP"/>
-                            <constraint firstItem="l09-2Q-xXd" firstAttribute="top" secondItem="ntD-RP-H1M" secondAttribute="bottom" constant="8" id="LuZ-RF-hi2"/>
-                            <constraint firstItem="S85-5L-248" firstAttribute="top" secondItem="FiE-Q9-hmh" secondAttribute="top" id="Yl5-wT-YtY"/>
-                            <constraint firstItem="L9k-IP-5oc" firstAttribute="centerX" secondItem="EYk-Ma-Y0d" secondAttribute="centerX" id="cqa-kd-bhL"/>
-                            <constraint firstItem="l09-2Q-xXd" firstAttribute="centerX" secondItem="EYk-Ma-Y0d" secondAttribute="centerX" id="q9q-9g-E29"/>
-                            <constraint firstItem="L9k-IP-5oc" firstAttribute="top" secondItem="l09-2Q-xXd" secondAttribute="bottom" constant="8" id="uTn-pD-m4n"/>
-                            <constraint firstItem="S85-5L-248" firstAttribute="centerX" secondItem="EYk-Ma-Y0d" secondAttribute="centerX" id="wbI-mu-hte"/>
+                            <constraint firstItem="s9a-Gy-8VM" firstAttribute="centerX" secondItem="EYk-Ma-Y0d" secondAttribute="centerX" id="QbB-EN-QGk"/>
+                            <constraint firstItem="s9a-Gy-8VM" firstAttribute="centerY" secondItem="EYk-Ma-Y0d" secondAttribute="centerY" id="rmx-qX-jsa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FiE-Q9-hmh"/>
                     </view>

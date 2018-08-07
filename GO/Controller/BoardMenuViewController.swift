@@ -70,4 +70,8 @@ extension BoardMenuViewController: UIPickerViewDelegate, UIPickerViewDataSource 
         return "\(row + 9)"
     }
     
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let attributedString = NSAttributedString(string: "\(row + 9)", attributes: [NSAttributedStringKey.foregroundColor : UIColor.lightGray])
+        return attributedString
+    }
 }

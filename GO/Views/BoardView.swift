@@ -14,6 +14,7 @@ public class BoardView: UIView {
     @IBInspectable var boardColor: UIColor = UIColor.brown
     @IBInspectable var dimension: Int = 19
     @IBInspectable var dots: Bool = false
+    @IBInspectable var gridColor: UIColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
     
     var board: GOBoard?
     
@@ -54,7 +55,7 @@ public class BoardView: UIView {
             grid.move(to: CGPoint(x: (bounds.width - gridSize.width) / 2 + CGFloat(i) * gridSize.width / CGFloat(numberOfSquares), y: (bounds.height - gridSize.height) / 2))
             grid.addLine(to: CGPoint(x: (bounds.width - gridSize.width) / 2 + CGFloat(i) * gridSize.width / CGFloat(numberOfSquares), y: (bounds.height - gridSize.height) / 2 + gridSize.height))
         }
-        UIColor.darkGray.setStroke()
+        gridColor.setStroke()
 
         grid.fill()
 
