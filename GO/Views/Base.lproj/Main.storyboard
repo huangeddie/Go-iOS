@@ -6,7 +6,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O6p-qx-vUf" customClass="BoardView" customModule="GO" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="20" width="748" height="748"/>
+                                <rect key="frame" x="138" y="20" width="748" height="748"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="O6p-qx-vUf" secondAttribute="height" id="4ua-7O-lQL"/>
                                 </constraints>
@@ -35,48 +34,56 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jjz-68-uHC">
-                                <rect key="frame" x="748" y="20" width="276" height="748"/>
+                                <rect key="frame" x="886" y="20" width="138" height="748"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="P7c-2x-rAB">
-                                        <rect key="frame" x="10" y="10" width="256" height="728"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="P7c-2x-rAB">
+                                        <rect key="frame" x="10" y="10" width="118" height="728"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Mc-Ba-XXN">
+                                                <rect key="frame" x="0.0" y="0.0" width="118" height="359"/>
+                                                <color key="backgroundColor" red="1" green="0.96561208822652189" blue="0.79745482489159614" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Undo">
+                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="undo:" destination="e2D-q0-aTW" eventType="touchUpInside" id="BAW-xz-7dm"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X6u-Li-MPt">
+                                                <rect key="frame" x="0.0" y="369" width="118" height="359"/>
+                                                <color key="backgroundColor" red="0.98106588666832772" green="0.83047806849952766" blue="1" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Pass">
+                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="pass:" destination="e2D-q0-aTW" eventType="touchUpInside" id="Ime-O0-Fsr"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="P7c-2x-rAB" secondAttribute="bottom" constant="10" id="DKS-dE-g4V"/>
+                                    <constraint firstAttribute="trailing" secondItem="P7c-2x-rAB" secondAttribute="trailing" constant="10" id="QhP-Kx-Bz4"/>
+                                    <constraint firstItem="P7c-2x-rAB" firstAttribute="top" secondItem="jjz-68-uHC" secondAttribute="top" constant="10" id="maU-gX-w5g"/>
+                                    <constraint firstItem="P7c-2x-rAB" firstAttribute="leading" secondItem="jjz-68-uHC" secondAttribute="leading" constant="10" id="shX-Z3-NaV"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i8o-c6-rUM">
+                                <rect key="frame" x="0.0" y="20" width="138" height="748"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2G0-2U-57l">
+                                        <rect key="frame" x="10" y="10" width="118" height="728"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9LD-GD-k5d" customClass="TurnView" customModule="GO" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="256" height="100"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="118" height="359"/>
                                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="100" id="dz0-bw-8og"/>
-                                                </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="gameEnded" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ikz-J5-HPC">
-                                                <rect key="frame" x="0.0" y="110" width="256" height="244"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Mc-Ba-XXN">
-                                                        <rect key="frame" x="0.0" y="0.0" width="123" height="244"/>
-                                                        <color key="backgroundColor" red="1" green="0.96561208822652189" blue="0.79745482489159614" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="Undo">
-                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="undo:" destination="e2D-q0-aTW" eventType="touchUpInside" id="BAW-xz-7dm"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X6u-Li-MPt">
-                                                        <rect key="frame" x="133" y="0.0" width="123" height="244"/>
-                                                        <color key="backgroundColor" red="0.98106588666832772" green="0.83047806849952766" blue="1" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="Pass">
-                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="pass:" destination="e2D-q0-aTW" eventType="touchUpInside" id="Ime-O0-Fsr"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MME-kO-rT7">
-                                                <rect key="frame" x="0.0" y="364" width="256" height="364"/>
+                                                <rect key="frame" x="0.0" y="369" width="118" height="359"/>
                                                 <color key="backgroundColor" red="1" green="0.8065804971310454" blue="0.82495456508471343" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="New Game">
                                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -87,28 +94,29 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="MME-kO-rT7" firstAttribute="height" secondItem="P7c-2x-rAB" secondAttribute="height" multiplier="0.5" id="TvM-Fs-a8P"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="P7c-2x-rAB" secondAttribute="bottom" constant="10" id="DKS-dE-g4V"/>
-                                    <constraint firstAttribute="trailing" secondItem="P7c-2x-rAB" secondAttribute="trailing" constant="10" id="QhP-Kx-Bz4"/>
-                                    <constraint firstItem="P7c-2x-rAB" firstAttribute="top" secondItem="jjz-68-uHC" secondAttribute="top" constant="10" id="maU-gX-w5g"/>
-                                    <constraint firstItem="P7c-2x-rAB" firstAttribute="leading" secondItem="jjz-68-uHC" secondAttribute="leading" constant="10" id="shX-Z3-NaV"/>
+                                    <constraint firstItem="2G0-2U-57l" firstAttribute="leading" secondItem="i8o-c6-rUM" secondAttribute="leading" constant="10" id="3IX-d5-ohk"/>
+                                    <constraint firstAttribute="trailing" secondItem="2G0-2U-57l" secondAttribute="trailing" constant="10" id="Mcy-yE-Y5e"/>
+                                    <constraint firstAttribute="bottom" secondItem="2G0-2U-57l" secondAttribute="bottom" constant="10" id="Uej-oq-K3J"/>
+                                    <constraint firstItem="2G0-2U-57l" firstAttribute="top" secondItem="i8o-c6-rUM" secondAttribute="top" constant="10" id="o9O-kY-Sa8"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="jjz-68-uHC" firstAttribute="leading" secondItem="O6p-qx-vUf" secondAttribute="trailing" id="5OW-pr-ImU"/>
                             <constraint firstItem="O6p-qx-vUf" firstAttribute="top" secondItem="7MG-6D-0V1" secondAttribute="top" id="73S-yN-7vW"/>
+                            <constraint firstItem="i8o-c6-rUM" firstAttribute="top" secondItem="7MG-6D-0V1" secondAttribute="top" id="BkD-20-uB8"/>
+                            <constraint firstItem="O6p-qx-vUf" firstAttribute="leading" secondItem="i8o-c6-rUM" secondAttribute="trailing" id="KAv-P8-txp"/>
                             <constraint firstItem="7MG-6D-0V1" firstAttribute="bottom" secondItem="jjz-68-uHC" secondAttribute="bottom" id="Kmn-yU-Vkt"/>
-                            <constraint firstItem="O6p-qx-vUf" firstAttribute="leading" secondItem="7MG-6D-0V1" secondAttribute="leading" id="XEi-wQ-p3a"/>
+                            <constraint firstItem="7MG-6D-0V1" firstAttribute="bottom" secondItem="i8o-c6-rUM" secondAttribute="bottom" id="Se8-na-gUN"/>
                             <constraint firstItem="jjz-68-uHC" firstAttribute="top" secondItem="7MG-6D-0V1" secondAttribute="top" id="b0d-Ct-I9H"/>
-                            <constraint firstItem="jjz-68-uHC" firstAttribute="leading" secondItem="O6p-qx-vUf" secondAttribute="trailing" id="cms-Ks-4MF"/>
+                            <constraint firstItem="O6p-qx-vUf" firstAttribute="centerX" secondItem="jok-UY-UoD" secondAttribute="centerX" id="cJg-jq-NZk"/>
                             <constraint firstItem="7MG-6D-0V1" firstAttribute="trailing" secondItem="jjz-68-uHC" secondAttribute="trailing" id="nuw-QY-syb"/>
                             <constraint firstItem="O6p-qx-vUf" firstAttribute="height" secondItem="7MG-6D-0V1" secondAttribute="height" id="wiu-ZH-o4A"/>
+                            <constraint firstItem="i8o-c6-rUM" firstAttribute="leading" secondItem="7MG-6D-0V1" secondAttribute="leading" id="y8a-kC-UXN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7MG-6D-0V1"/>
                     </view>
@@ -121,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rhc-gT-nzQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1137" y="72"/>
+            <point key="canvasLocation" x="1136.71875" y="71.875"/>
         </scene>
         <!--Board Menu View Controller-->
         <scene sceneID="TxZ-2P-Y83">
